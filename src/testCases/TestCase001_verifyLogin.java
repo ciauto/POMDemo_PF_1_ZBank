@@ -30,8 +30,12 @@ public class TestCase001_verifyLogin {
 	}	
 	@Test
 	public void verifyLogin() {
+		
+		
 		hp.ClickSignIn();
-		lp.doLogin("username", "password");
+		lp.dologin("username", "password");
+		
+		
 	}
 	@AfterMethod
 	public void tearDown() {

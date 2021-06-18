@@ -5,17 +5,40 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage {
 	WebDriver driver;
+	
+	
+	
+	
 	//Locate web elements
 	@FindBy(id="user_login")
-	public WebElement username;
-	@FindBy(id="user_password")
-	public WebElement password;
-	@FindBy(name="submit")
-	public WebElement signIn;
+	public WebElement usernametxtbox;
 	
-	public void doLogin(String myusername, String mypassword) {
-		username.sendKeys(myusername);
-		password.sendKeys(mypassword);
-		signIn.click();
+	
+	@FindBy(id="user_password")
+	public WebElement passwordtxtbox;
+	
+	
+	@FindBy(name="submit")
+	public WebElement Submitbtn;
+	
+	
+	
+	public void fillusername(String uname) {
+		usernametxtbox.sendKeys(uname);
 	}
+	
+	public void fillpassword(String pword) {
+		passwordtxtbox.sendKeys(pword);
+	}
+	
+	public void clickSubmitbtn() {
+		Submitbtn.click();
+	}
+	
+	public void dologin(String uname, String pword) {
+		usernametxtbox.sendKeys(uname);
+		passwordtxtbox.sendKeys(pword);
+		Submitbtn.click();
+	}
+	
 }

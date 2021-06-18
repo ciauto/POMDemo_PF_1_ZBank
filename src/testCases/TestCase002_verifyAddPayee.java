@@ -37,7 +37,7 @@ public class TestCase002_verifyAddPayee {
 	@Test
 	public void verifyAddPayee() {
 		hp.ClickSignIn();
-		lp.doLogin("username", "password");
+		lp.dologin("username", "password");
 		
 		
 	}
